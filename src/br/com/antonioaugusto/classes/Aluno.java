@@ -8,45 +8,15 @@ public class Aluno {
 	private String cpf;
 	private String nomePai;
 	private String nomeMae;
+	private Disciplina disciplina;
 	
-	private double nota1;
-	private double nota2;
-	private double nota3;
-	private double nota4;
-	
-	
-	
-	
-	public double getNota1() {
-		return nota1;
+
+	public Disciplina getDisciplina() {
+		return disciplina;
 	}
 
-	public void setNota1(double nota1) {
-		this.nota1 = nota1;
-	}
-
-	public double getNota2() {
-		return nota2;
-	}
-
-	public void setNota2(double nota2) {
-		this.nota2 = nota2;
-	}
-
-	public double getNota3() {
-		return nota3;
-	}
-
-	public void setNota3(double nota3) {
-		this.nota3 = nota3;
-	}
-
-	public double getNota4() {
-		return nota4;
-	}
-
-	public void setNota4(double nota4) {
-		this.nota4 = nota4;
+	public void setDisciplina(Disciplina disciplina) {
+		this.disciplina = disciplina;
 	}
 
 	public String getNome() {
@@ -105,34 +75,15 @@ public class Aluno {
 		nome = novoNome;
 		idade = novaIdade;
 	}
-	
-	
-	public double getMedia() {
-		double soma = nota1+nota2+nota3+nota4;
-		double media = soma/4;
-		return media;
+
+	@Override
+	public String toString() {
+		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", cpf=" + cpf
+				+ ", nomePai=" + nomePai + ", nomeMae=" + nomeMae + ", disciplina=" + disciplina + "]";
 	}
 	
 	
-	public String getAprovado() {
-		double media = getMedia();
-		boolean aprovado = media >= 60;
-		String mensagem = "";
-		if(aprovado) {
-			mensagem = "O aluno "+ this.nome+" foi aprovado com média "+ media;
-		}else {
-			mensagem = "O aluno "+ this.nome+" foi reprovado com média "+ media;
-		}
-		
-		return mensagem;
-	}
 	
-	//Mais utilizado
-	public boolean getRsultadoFinal() {
-		double media = getMedia();
-		boolean aprovado = media >= 60;
-		return aprovado;
-	}
 	
 	
 
