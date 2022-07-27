@@ -42,6 +42,18 @@ public class Disciplina {
 		this.nota4 = nota4;
 	}
 	
+	public Disciplina() {
+		
+	}
+	
+	public Disciplina(String nome, double nota1, double nota2, double nota3, double nota4) {
+		this.nome = nome;
+		this.nota1 = nota1;
+		this.nota2 = nota2;
+		this.nota3 = nota3;
+		this.nota4 = nota4;
+	}
+	
 	
 	public double getMedia() {
 		double soma = nota1+nota2+nota3+nota4;
@@ -55,9 +67,9 @@ public class Disciplina {
 		boolean aprovado = media >= 60;
 		String mensagem = "";
 		if(aprovado) {
-			mensagem = "O aluno "+ this.nome+" foi aprovado com média "+ media;
+			mensagem = "O aluno  foi aprovado com média "+ media;
 		}else {
-			mensagem = "O aluno "+ this.nome+" foi reprovado com média "+ media;
+			mensagem = "O aluno foi reprovado com média "+ media;
 		}
 		
 		return mensagem;

@@ -1,5 +1,7 @@
 package br.com.antonioaugusto.classes;
 
+import java.util.List;
+
 public class Aluno {
 	
 	private String nome;
@@ -8,16 +10,10 @@ public class Aluno {
 	private String cpf;
 	private String nomePai;
 	private String nomeMae;
-	private Disciplina disciplina;
+	private List<Disciplina> disciplinas;
 	
 
-	public Disciplina getDisciplina() {
-		return disciplina;
-	}
 
-	public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
-	}
 
 	public String getNome() {
 		return nome;
@@ -79,7 +75,15 @@ public class Aluno {
 	@Override
 	public String toString() {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", cpf=" + cpf
-				+ ", nomePai=" + nomePai + ", nomeMae=" + nomeMae + ", disciplina=" + disciplina + "]";
+				+ ",\n nomePai=" + nomePai + ", nomeMae=" + nomeMae + ", disciplinas=" + disciplinas + "]";
+	}
+
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
+	}
+
+	public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
 	}
 	
 	
